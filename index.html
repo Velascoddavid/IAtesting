@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>SILVER BEAST — DROP 04</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="promo">ENVÍOS EXPRÉS A TODO MÉXICO <span>·</span> DROP 04 DISPONIBLE AHORA</div>
+
+  <header class="site-header glass-panel" id="top">
+    <button class="icon-button menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+      <i></i><i></i>
+    </button>
+
+    <nav class="desktop-nav" aria-label="Principal">
+      <a href="#top" data-filter-nav="todos">Inicio</a>
+      <a href="#catalogo" data-filter-nav="hombre">Hombres</a>
+      <a href="#catalogo" data-filter-nav="mujer">Mujeres</a>
+      <a href="#catalogo" data-filter-nav="accesorios">Accesorios</a>
+      <a href="#reviews">Reseñas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <a class="brand" href="#top" aria-label="Silver Beast">
+      <span>SILVER</span><strong>BEAST</strong><b>SB</b>
+    </a>
+
+    <div class="header-actions">
+      <button class="icon-button glass-pill" id="search-toggle" type="button" aria-label="Buscar prenda">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="6"></circle>
+          <path d="m20 20-4.2-4.2"></path>
+        </svg>
+      </button>
+      <button class="icon-button glass-pill" id="fav-filter-btn" type="button" aria-label="Ver favoritos">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20.8 8.7c0 5-8.8 10.3-8.8 10.3S3.2 13.7 3.2 8.7A4.7 4.7 0 0 1 12 6.4a4.7 4.7 0 0 1 8.8 2.3Z"></path>
+        </svg>
+        <em class="badge-dot" id="fav-count" hidden>0</em>
+      </button>
+      <button class="icon-button glass-pill bag-button" id="bag-button" type="button" aria-label="Abrir bolsa" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M5 8.5h14l-1 11H6l-1-11Z"></path>
+          <path d="M8.5 9V6.5a3.5 3.5 0 0 1 7 0V9"></path>
+        </svg>
+        <em id="bag-count">0</em>
+      </button>
+    </div>
+  </header>
+
+  <div class="search-bar glass-panel" id="search-bar" hidden>
+    <div class="search-inner">
+      <input type="search" id="search-input" placeholder="Buscar por prenda o marca (ej. Oversized, YoungLA, Jogger)..." autocomplete="off">
+      <button type="button" id="search-clear" aria-label="Cerrar búsqueda">×</button>
+    </div>
+  </div>
+
+  <div class="drawer-backdrop" id="mobile-overlay"></div>
+  <aside class="mobile-menu glass-panel" id="mobile-menu" aria-hidden="true">
+    <div class="drawer-head">
+      <p>NAVEGACIÓN</p>
+      <button class="menu-close" id="close-menu" type="button" aria-label="Cerrar menú">×</button>
+    </div>
+    <a href="#top" data-filter-nav="todos">Inicio</a>
+    <a href="#catalogo" data-filter-nav="hombre">Hombres</a>
+    <a href="#catalogo" data-filter-nav="mujer">Mujeres</a>
+    <a href="#catalogo" data-filter-nav="accesorios">Accesorios</a>
+    <a href="#reviews">Reseñas</a>
+    <a href="#contacto">Contacto</a>
+  </aside>
+
+  <main>
+    <section class="hero" aria-label="Drop 04">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span></span> DROP 04 / 2026</p>
+        <h1>HEAVYWEIGHT<br><i>DISCIPLINE.</i></h1>
+        <p class="hero-text">Prendas de gramaje pesado cortadas para la alta exigencia y la calle.</p>
+        <a class="button button-glass-red" href="#catalogo">CONSEGUIR PIEZA <b>→</b></a>
+      </div>
+    </section>
+
+    <section class="dual reveal" id="dual" aria-label="Categorías principales">
+      <a class="gender-card men" href="#catalogo" data-split-filter="hombre">
+        <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=1200&q=85" alt="Colección Hombre" loading="lazy">
+        <div class="gender-info glass-tag">
+          <h2>HOMBRE</h2>
+          <span>EXPLORAR DROP <b>→</b></span>
+        </div>
+      </a>
+      <a class="gender-card women" href="#catalogo" data-split-filter="mujer">
+        <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=1200&q=85" alt="Colección Mujer" loading="lazy">
+        <div class="gender-info glass-tag">
+          <h2>MUJER</h2>
+          <span>EXPLORAR DROP <b>→</b></span>
+        </div>
+      </a>
+    </section>
+
+    <section class="catalog" id="catalogo">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow"><span></span> CATÁLOGO OFICIAL</p>
+          <h2>SELECCIÓN</h2>
+        </div>
+        <p id="product-counter">08 PIEZAS</p>
+      </div>
+
+      <div class="filters glass-panel reveal" id="filters-container" aria-label="Filtros de productos">
+        <div class="filter-row">
+          <span class="filter-label">GÉNERO</span>
+          <div class="filter-chips" id="filter-category"></div>
+        </div>
+        <div class="filter-row">
+          <span class="filter-label">MARCA</span>
+          <div class="filter-chips" id="filter-brand"></div>
+        </div>
+        <div class="filter-row">
+          <span class="filter-label">TALLA</span>
+          <div class="filter-chips" id="filter-size"></div>
+        </div>
+      </div>
+
+      <p class="empty-state" id="empty-state" hidden>
+        NO HAY PIEZAS QUE COINCIDAN CON EL FILTRO.
+        <button type="button" id="reset-filters">RESTABLECER TODO</button>
+      </p>
+
+      <div class="product-grid" id="product-grid">
+        <article class="product-card reveal"
+          data-id="1"
+          data-brand="Silver Beast"
+          data-category="hombre"
+          data-size="S,M,L,XL"
+          data-color="Negro:#0d0d0d,Rojo:#e50914,Grafito:#3a3a3a"
+          data-price="849">
+          <div class="card-media">
+            <span class="card-badge glass-pill">DROP 04</span>
+            <button class="fav-btn glass-pill" type="button" aria-label="Guardar en favoritos">♥</button>
+            <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=900&q=85" alt="RAGE OVERSIZED TEE" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-meta">SILVER BEAST</div>
+            <h3 class="card-title">RAGE OVERSIZED TEE</h3>
+            <div class="card-rating">★★★★★ <span>24 Reviews</span></div>
+            <div class="card-swatches"></div>
+            <div class="card-price">$ 849.00 MXN</div>
+            <button class="btn-quickview glass-button" type="button">CONSEGUIR PIEZA</button>
+          </div>
+        </article>
+
+        <article class="product-card reveal"
+          data-id="2"
+          data-brand="YoungLA"
+          data-category="hombre"
+          data-size="S,M,L,XL"
+          data-color="Negro:#0d0d0d,Gris:#4a4a4a,Rojo:#b31217"
+          data-price="1600">
+          <div class="card-media">
+            <span class="card-badge glass-pill">LIMITED</span>
+            <button class="fav-btn glass-pill" type="button" aria-label="Guardar en favoritos">♥</button>
+            <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=900&q=85" alt="4259 COMPRESSION TEE" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-meta">YOUNGLA</div>
+            <h3 class="card-title">4259 COMPRESSION TEE</h3>
+            <div class="card-rating">★★★★★ <span>31 Reviews</span></div>
+            <div class="card-swatches"></div>
+            <div class="card-price">$ 1,600.00 MXN</div>
+            <button class="btn-quickview glass-button" type="button">CONSEGUIR PIEZA</button>
+          </div>
+        </article>
+
+        <article class="product-card reveal"
+          data-id="3"
+          data-brand="Silver Beast"
+          data-category="mujer"
+          data-size="XS,S,M,L"
+          data-color="Negro:#0d0d0d,Carmesí:#e50914"
+          data-price="1299">
+          <div class="card-media">
+            <span class="card-badge glass-pill">BESTSELLER</span>
+            <button class="fav-btn glass-pill" type="button" aria-label="Guardar en favoritos">♥</button>
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=85" alt="VENOM SEAMLESS SET" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-meta">SILVER BEAST</div>
+            <h3 class="card-title">VENOM SEAMLESS SET</h3>
+            <div class="card-rating">★★★★★ <span>19 Reviews</span></div>
+            <div class="card-swatches"></div>
+            <div class="card-price">$ 1,299.00 MXN</div>
+            <button class="btn-quickview glass-button" type="button">CONSEGUIR PIEZA</button>
+          </div>
+        </article>
+
+        <article class="product-card reveal"
+          data-id="4"
+          data-brand="Gymshark"
+          data-category="hombre"
+          data-size="M,L,XL"
+          data-color="Negro:#111111,Gris:#555555"
+          data-price="2200">
+          <div class="card-media">
+            <span class="card-badge glass-pill">NEW</span>
+            <button class="fav-btn glass-pill" type="button" aria-label="Guardar en favoritos">♥</button>
+            <img src="https://images.unsplash.com/photo-1552902865-b72c031ac5ea?auto=format&fit=crop&w=900&q=85" alt="BELCAST TRACK PANT" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-meta">GYMSHARK</div>
+            <h3 class="card-title">BELCAST TRACK PANT</h3>
+            <div class="card-rating">★★★★★ <span>16 Reviews</span></div>
+            <div class="card-swatches"></div>
+            <div class="card-price">$ 2,200.00 MXN</div>
+            <button class="btn-quickview glass-button" type="button">CONSEGUIR PIEZA</button>
+          </div>
+        </article>
+
+        <article class="product-card reveal"
+          data-id="5"
+          data-brand="Darc Sport"
+          data-category="hombre"
+          data-size="M,L,XL,XXL"
+          data-color="Negro:#0a0a0a,Blanco:#f4f4f4"
+          data-price="1450">
+          <div class="card-media">
+            <span class="card-badge glass-pill">HEAVYWEIGHT</span>
+            <button class="fav-btn glass-pill" type="button" aria-label="Guardar en favoritos">♥</button>
+            <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=900&q=85" alt="WOLVES CLUB OVERSIZED TEE" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-meta">DARC SPORT</div>
+            <h3 class="card-title">WOLVES CLUB OVERSIZED TEE</h3>
+            <div class="card-rating">★★★★★ <span>42 Reviews</span></div>
+            <div class="card-swatches"></div>
+            <div class="card-price">$ 1,450.00 MXN</div>
+            <button class="btn-quickview glass-button" type="button">CONSEGUIR PIEZA</button>
+          </div>
+        </article>
+
+        <article class="product-card reveal"
+          data-id="6"
+          data-brand="YoungLA"
+          data-category="hombre"
+          data-size="S,M,L,XL"
+          data-color="Negro:#0d0d0d,Grafito:#2b2b2b"
+          data-price="1550">
+          <div class="card-media">
+            <span class="card-badge glass-pill">DROP 04</span>
+            <button class="fav-btn glass-pill" type="button" aria-label="Guardar en favoritos">♥</button>
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85" alt="NY WIDE LEG SWEATS" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-meta">YOUNGLA</div>
+            <h3 class="card-title">NY WIDE LEG SWEATS</h3>
+            <div class="card-rating">★★★★★ <span>16 Reviews</span></div>
+            <div class="card-swatches"></div>
+            <div class="card-price">$ 1,550.00 MXN</div>
+            <button class="btn-quickview glass-button" type="button">CONSEGUIR PIEZA</button>
+          </div>
+        </article>
+
+        <article class="product-card reveal"
+          data-id="7"
+          data-brand="Wolves Club"
+          data-category="mujer"
+          data-size="XS,S,M"
+          data-color="Negro:#0d0d0d,Blanco:#f0f0f0"
+          data-price="1150">
+          <div class="card-media">
+            <span class="card-badge glass-pill">NEW</span>
+            <button class="fav-btn glass-pill" type="button" aria-label="Guardar en favoritos">♥</button>
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=85" alt="APEX TRAINING SET" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-meta">WOLVES CLUB</div>
+            <h3 class="card-title">APEX TRAINING SET</h3>
+            <div class="card-rating">★★★★★ <span>28 Reviews</span></div>
+            <div class="card-swatches"></div>
+            <div class="card-price">$ 1,150.00 MXN</div>
+            <button class="btn-quickview glass-button" type="button">CONSEGUIR PIEZA</button>
+          </div>
+        </article>
+
+        <article class="product-card reveal"
+          data-id="8"
+          data-brand="Silver Beast"
+          data-category="accesorios"
+          data-size="UNITALLA"
+          data-color="Negro:#0a0a0a,Rojo:#e50914"
+          data-price="499">
+          <div class="card-media">
+            <span class="card-badge glass-pill">PRO GEAR</span>
+            <button class="fav-btn glass-pill" type="button" aria-label="Guardar en favoritos">♥</button>
+            <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=900&q=85" alt="HEAVY DUTY LIFTING STRAPS" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-meta">SILVER BEAST</div>
+            <h3 class="card-title">HEAVY DUTY LIFTING STRAPS</h3>
+            <div class="card-rating">★★★★★ <span>53 Reviews</span></div>
+            <div class="card-swatches"></div>
+            <div class="card-price">$ 499.00 MXN</div>
+            <button class="btn-quickview glass-button" type="button">CONSEGUIR PIEZA</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="reviews" id="reviews">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow"><span></span> COMMUNITY / DROP PROOF</p>
+          <h2>RESEÑAS REALES</h2>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-btn glass-button" id="reviews-prev" type="button" aria-label="Anterior">←</button>
+          <button class="carousel-btn glass-button" id="reviews-next" type="button" aria-label="Siguiente">→</button>
+        </div>
+      </div>
+
+      <div class="reviews-carousel reveal" id="reviews-carousel">
+        <article class="review-card glass-panel"
+          data-customer="Alex R."
+          data-rating="5"
+          data-evidence="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&w=900&q=80,https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=900&q=80">
+          <div class="review-photo-wrapper">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=700&q=80" alt="Cliente usando producto" loading="lazy">
+            <span class="proof-badge glass-pill">VER EVIDENCIA ↗</span>
+          </div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-comment">"El gramaje de la playera está a otro nivel, no se deforma con las lavadas."</p>
+          <div class="review-meta"><strong>@alex_fit</strong> <span>· Talla L comprada</span></div>
+        </article>
+
+        <article class="review-card glass-panel"
+          data-customer="Valeria M."
+          data-rating="5"
+          data-evidence="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=80,https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&fit=crop&w=900&q=80">
+          <div class="review-photo-wrapper">
+            <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?auto=format&fit=crop&w=700&q=80" alt="Cliente usando producto" loading="lazy">
+            <span class="proof-badge glass-pill">VER EVIDENCIA ↗</span>
+          </div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-comment">"Ajuste brutal en el Venom Seamless Set, cero transparencias en entrenamiento pesado."</p>
+          <div class="review-meta"><strong>@val_lifts</strong> <span>· Talla S comprada</span></div>
+        </article>
+
+        <article class="review-card glass-panel"
+          data-customer="Rodrigo G."
+          data-rating="5"
+          data-evidence="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=900&q=80,https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=900&q=80">
+          <div class="review-photo-wrapper">
+            <img src="https://images.unsplash.com/photo-1583454155184-870a1f63aebc?auto=format&fit=crop&w=700&q=80" alt="Cliente usando producto" loading="lazy">
+            <span class="proof-badge glass-pill">VER EVIDENCIA ↗</span>
+          </div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-comment">"Entrega personal puntual y calidad 100% original en el drop de YoungLA y Darc Sport."</p>
+          <div class="review-meta"><strong>@rodrigo_beast</strong> <span>· Talla XL comprada</span></div>
+        </article>
+
+        <article class="review-card glass-panel"
+          data-customer="Daniela K."
+          data-rating="5"
+          data-evidence="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=80,https://images.unsplash.com/photo-1552902865-b72c031ac5ea?auto=format&fit=crop&w=900&q=80">
+          <div class="review-photo-wrapper">
+            <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=700&q=80" alt="Cliente usando producto" loading="lazy">
+            <span class="proof-badge glass-pill">VER EVIDENCIA ↗</span>
+          </div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-comment">"Atención directa por WhatsApp impecable, me guiaron con las medidas exactas y llegó en 24h."</p>
+          <div class="review-meta"><strong>@dani_iron</strong> <span>· Talla M comprada</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact reveal" id="contacto">
+      <div class="contact-card glass-panel">
+        <div>
+          <p class="eyebrow"><span></span> CONCIERGE & ATENCIÓN DIRECTA</p>
+          <h2>¿DUDAS CON TU<br>TALLA O ENVÍO?</h2>
+        </div>
+        <a class="whatsapp-box glass-button" href="https://wa.me/5210000000000?text=Hola%20Silver%20Beast%2C%20quiero%20informaci%C3%B3n%20sobre%20tallas%20y%20disponibilidad." target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.52 3.48A11.9 11.9 0 0 0 2.93 18.66L2 22l3.43-.9A11.91 11.91 0 1 0 20.52 3.48ZM12 21a9 9 0 0 1-4.32-1.1l-.3-.16-2.04.54.55-1.98-.18-.32A9 9 0 1 1 12 21Zm4.94-6.73c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.6.07a7.38 7.38 0 0 1-2.17-1.34 8.1 8.1 0 0 1-1.5-1.87c-.16-.27 0-.42.12-.55.13-.13.27-.32.4-.48.14-.16.18-.27.27-.45.1-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.3 0 1.35.99 2.67 1.13 2.85.14.18 1.95 2.98 4.72 4.18.66.29 1.18.46 1.58.59.66.21 1.26.18 1.73.11.53-.08 1.6-.66 1.83-1.3.23-.64.23-1.19.16-1.3-.06-.12-.24-.19-.51-.33Z" fill="currentColor"></path>
+          </svg>
+          <span>
+            <small>ATENCIÓN DIRECTA</small>
+            WHATSAPP <b>↗</b>
+          </span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="#top"><span>SILVER</span><strong>BEAST</strong><b>SB</b></a>
+    <div class="footer-links">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#reviews">Community Proof</a>
+      <a href="https://wa.me/5210000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </div>
+    <p>© 2026 SILVER BEAST. MÉXICO.<br>ENVÍOS NACIONALES Y ENTREGAS VERIFICADAS.</p>
+  </footer>
+
+  <a class="float-wa glass-panel" href="https://wa.me/5210000000000?text=Hola%20Silver%20Beast%2C%20quiero%20consultar%20disponibilidad%20del%20cat%C3%A1logo." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Oficial">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M20.52 3.48A11.9 11.9 0 0 0 2.93 18.66L2 22l3.43-.9A11.91 11.91 0 1 0 20.52 3.48ZM12 21a9 9 0 0 1-4.32-1.1l-.3-.16-2.04.54.55-1.98-.18-.32A9 9 0 1 1 12 21Zm4.94-6.73c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.6.07a7.38 7.38 0 0 1-2.17-1.34 8.1 8.1 0 0 1-1.5-1.87c-.16-.27 0-.42.12-.55.13-.13.27-.32.4-.48.14-.16.18-.27.27-.45.1-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.3 0 1.35.99 2.67 1.13 2.85.14.18 1.95 2.98 4.72 4.18.66.29 1.18.46 1.58.59.66.21 1.26.18 1.73.11.53-.08 1.6-.66 1.83-1.3.23-.64.23-1.19.16-1.3-.06-.12-.24-.19-.51-.33Z" fill="currentColor"></path>
+    </svg>
+  </a>
+
+  <dialog class="product-modal glass-panel" id="product-modal">
+    <div class="modal-inner">
+      <button class="modal-close glass-pill" id="modal-close" type="button" aria-label="Cerrar">×</button>
+      <div class="modal-media">
+        <img id="modal-img" src="" alt="">
+      </div>
+      <div class="modal-details">
+        <span class="modal-brand" id="modal-brand"></span>
+        <h3 class="modal-title" id="modal-title"></h3>
+        <div class="modal-price" id="modal-price"></div>
+        <div class="modal-section">
+          <span class="modal-label">SELECCIONA TALLA</span>
+          <div class="modal-sizes" id="modal-sizes"></div>
+        </div>
+        <button class="button button-glass-red btn-full" id="add-to-bag-btn" type="button">AGREGAR A LA BOLSA <b>+</b></button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="evidence-modal glass-panel" id="evidence-modal">
+    <div class="evidence-inner">
+      <div class="evidence-header">
+        <div>
+          <p class="eyebrow"><span></span> DROP PROOF</p>
+          <h3 class="evidence-title" id="evidence-customer"></h3>
+        </div>
+        <button class="modal-close glass-pill" id="evidence-close" type="button" aria-label="Cerrar">×</button>
+      </div>
+      <div class="evidence-gallery" id="evidence-gallery"></div>
+    </div>
+  </dialog>
+
+  <div class="drawer-backdrop" id="cart-overlay"></div>
+  <aside class="cart-drawer glass-panel" id="cart-drawer" aria-hidden="true">
+    <div class="drawer-head">
+      <div>
+        <p>TU BOLSA</p>
+        <span id="cart-quantity">0 PIEZAS</span>
+      </div>
+      <button class="drawer-close" id="cart-close" type="button" aria-label="Cerrar bolsa">×</button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-foot">
+      <div class="cart-subtotal">
+        <span>SUBTOTAL</span>
+        <strong id="cart-total">$ 0.00 MXN</strong>
+      </div>
+      <button class="button button-glass-red btn-full" id="whatsapp-checkout" type="button">ORDENAR POR WHATSAPP <b>↗</b></button>
+    </div>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>
